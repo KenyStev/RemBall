@@ -1,0 +1,58 @@
+package kodomosoft.net.mygdxgame.actor;
+
+import kodomosoft.net.mygdxgame.CrazyBallsMain;
+import kodomosoft.net.mygdxgame.listener.InputDYAListener;
+
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.Texture.TextureFilter;
+import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
+
+/**
+ * ButtonActor es una clase que crea los bottones del menu principal 
+ * dependiendo del indice del menu que se le dé siendo:
+ * 1 - Boton de Play
+ * 2 - Boton de Opciones
+ * 3 - Boton de Exit
+ * */
+
+public class ButtonActor extends Image {
+
+	/*VARIABLES DE INSTANCIA*/
+	private Texture TextButton;
+	private TextureRegion buttontxt;
+	private int buttonIn;
+	
+	/*CONTRUCTOR DE LOS BOTONES DEL MENU PRINCIPAL*/
+	public ButtonActor(int button, CrazyBallsMain game) {
+		this.buttonIn=button;
+		
+		//Tomamos la Textura Segun el Indice
+		switch(buttonIn){
+		case 1:
+			TextButton = CrazyBallsMain.MANAGER.get("btnPlay.png", Texture.class);
+			break;
+		case 2:
+			TextButton = CrazyBallsMain.MANAGER.get("btnOptions.png", Texture.class);
+			break;
+		case 3:
+			TextButton = CrazyBallsMain.MANAGER.get("btnExit.png", Texture.class);
+			break;
+		}
+		
+		TextButton.setFilter(TextureFilter.Linear, TextureFilter.Linear);
+		buttontxt = new TextureRegion(TextButton, 221, 89);
+		setSize(buttontxt.getRegionWidth(), buttontxt.getRegionHeight());
+		addListener(new InputDYAListener(this, game, button-1));
+	}
+	
+	@Override
+	public void draw(Batch batch, float parentAlpha) {
+		super.draw(batch, parentAlpha);
+		batch.draw(buttontxt, getX(), getY(), getOriginX(), getOriginY(), 
+				getWidth(), getHeight(), getScaleX(), getScaleY(), 
+				getRotation());
+	}
+
+}
