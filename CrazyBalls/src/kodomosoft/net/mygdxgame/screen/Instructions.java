@@ -38,7 +38,11 @@ public class Instructions extends AbstractScreen {
 	
 		//Creamos el Boton de back para regresar al Menu Principal
 		img1 = new Image(bck1);
+<<<<<<< HEAD
 		img1.setPosition(50, 90);
+=======
+		img1.setPosition(50, 80);
+>>>>>>> 033bf79e1c5746ec0ba0a533c76a6f1d8c905421
 		img1.addListener(new InputDYAListener(img1, game, 3));
 		stage.addActor(img1);
 		

@@ -42,7 +42,11 @@ public class ButtonActor extends Image {
 		}
 		
 		TextButton.setFilter(TextureFilter.Linear, TextureFilter.Linear);
+<<<<<<< HEAD
 		buttontxt = new TextureRegion(TextButton, 241, 108);
+=======
+		buttontxt = new TextureRegion(TextButton, 221, 89);
+>>>>>>> 033bf79e1c5746ec0ba0a533c76a6f1d8c905421
 		setSize(buttontxt.getRegionWidth(), buttontxt.getRegionHeight());
 		addListener(new InputDYAListener(this, game, button-1));
 	}

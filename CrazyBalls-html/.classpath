@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+<<<<<<< HEAD
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/CrazyBalls"/>
 	<classpathentry exported="true" kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
@@ -9,4 +10,14 @@
 	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/gdx-backend-gwt.jar" sourcepath="war/WEB-INF/lib/gdx-backend-gwt-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/gdx-backend-gwt-sources.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+=======
+	<classpathentry kind="src" combineaccessrules="false" path="/CrazyBalls"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/CrazyBalls/libs/gdx.jar" sourcepath="/CrazyBalls/libs/gdx-sources.jar"/>
+	<classpathentry kind="lib" path="/CrazyBalls/libs/gdx-sources.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gdx-backend-gwt.jar" sourcepath="war/WEB-INF/lib/gdx-backend-gwt-sources.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gdx-backend-gwt-sources.jar"/>
+>>>>>>> 033bf79e1c5746ec0ba0a533c76a6f1d8c905421
 </classpath>

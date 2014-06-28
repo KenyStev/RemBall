@@ -44,11 +44,19 @@ public class MainScreen extends AbstractScreen {
 		stg.addActor(btn1);
 		
 		btn2 = new ButtonActor(2, game);
+<<<<<<< HEAD
 		btn2.setPosition(stg.getWidth()/2 - btn2.getWidth()/2, ((stg.getHeight()/2 - btn2.getHeight()/2) + 5));
 		stg.addActor(btn2);
 		
 		btn3 = new ButtonActor(3, game);
 		btn3.setPosition(stg.getWidth()/2 - btn3.getWidth()/2, ((stg.getHeight()/2 - btn3.getHeight()*1.5f) + 5));
+=======
+		btn2.setPosition(stg.getWidth()/2 - btn2.getWidth()/2, stg.getHeight()/2 - btn2.getHeight()/2);
+		stg.addActor(btn2);
+		
+		btn3 = new ButtonActor(3, game);
+		btn3.setPosition(stg.getWidth()/2 - btn3.getWidth()/2, stg.getHeight()/2 - btn3.getHeight()*1.5f);
+>>>>>>> 033bf79e1c5746ec0ba0a533c76a6f1d8c905421
 		stg.addActor(btn3);
 		
 	

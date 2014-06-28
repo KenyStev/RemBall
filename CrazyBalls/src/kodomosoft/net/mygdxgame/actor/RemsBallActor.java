@@ -16,6 +16,7 @@ public class RemsBallActor extends Actor {
 	//Variables Mover Ball
 	private Vector2 velocidad = new Vector2(500,500);
 
+<<<<<<< HEAD
 	public RemsBallActor(float x, float y, int face) {
 		
 		//Estas Variables son para 
@@ -36,6 +37,11 @@ public class RemsBallActor extends Actor {
 		System.out.print(ruta);
 		ball = CrazyBallsMain.MANAGER.get(ruta, Texture.class);
 		Ball = new TextureRegion(ball, widt, hei);
+=======
+	public RemsBallActor(float x, float y) {
+		ball = CrazyBallsMain.MANAGER.get("face1.png", Texture.class);
+		Ball = new TextureRegion(ball, 75, 67);
+>>>>>>> 033bf79e1c5746ec0ba0a533c76a6f1d8c905421
 		setSize(Ball.getRegionWidth(), Ball.getRegionHeight());
 		setPosition(x, y);
 	}

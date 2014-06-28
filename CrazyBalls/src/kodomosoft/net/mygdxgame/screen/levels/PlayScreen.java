@@ -1,5 +1,6 @@
 package kodomosoft.net.mygdxgame.screen.levels;
 
+<<<<<<< HEAD
 import java.util.Random;
 
 import kodomosoft.net.mygdxgame.CrazyBallsMain;
@@ -8,6 +9,12 @@ import kodomosoft.net.mygdxgame.actor.RemsBallActor;
 import kodomosoft.net.mygdxgame.listener.InputDYAListener;
 import kodomosoft.net.mygdxgame.screen.AbstractScreen;
 import kodomosoft.net.mygdxgame.screen.LevelScreen;
+=======
+import kodomosoft.net.mygdxgame.CrazyBallsMain;
+import kodomosoft.net.mygdxgame.actor.RemsBallActor;
+import kodomosoft.net.mygdxgame.listener.InputDYAListener;
+import kodomosoft.net.mygdxgame.screen.AbstractScreen;
+>>>>>>> 033bf79e1c5746ec0ba0a533c76a6f1d8c905421
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
@@ -24,6 +31,7 @@ public class PlayScreen extends AbstractScreen {
 					y = 0;
 	private int cantidad = 0,
 				contador = 0;
+<<<<<<< HEAD
 	private Image backButton, retryBtn, level1Title;
 	
 	private int cont = 0;
@@ -33,6 +41,12 @@ public class PlayScreen extends AbstractScreen {
 	public PlayScreen(CrazyBallsMain game) {
 		super(game);
 		
+=======
+	
+
+	public PlayScreen(CrazyBallsMain game) {
+		super(game);
+>>>>>>> 033bf79e1c5746ec0ba0a533c76a6f1d8c905421
 	}
 
 	@Override
@@ -40,6 +54,7 @@ public class PlayScreen extends AbstractScreen {
 		stage =  new Stage(400, 800, true, game.getSpriteBatch());
 		Gdx.input.setInputProcessor(stage);
 		
+<<<<<<< HEAD
 		this.LevelActual = LevelScreen.levelRules[game.getLevel()-1];
 		String BallsToLevels[] = this.LevelActual.split(",");
 		this.BallsToLevels=BallsToLevels;
@@ -47,10 +62,15 @@ public class PlayScreen extends AbstractScreen {
 		
 		//Crear Fondo
 		Texture txt = CrazyBallsMain.MANAGER.get("playScreen.png", Texture.class);
+=======
+		//Crear Fondo
+		Texture txt = CrazyBallsMain.MANAGER.get("background.png", Texture.class);
+>>>>>>> 033bf79e1c5746ec0ba0a533c76a6f1d8c905421
 		txt.setFilter(TextureFilter.Linear, TextureFilter.Linear);
 		TextureRegion txtr = new TextureRegion(txt, 480, 800);
 		Image img = new Image(txtr);
 		stage.addActor(img);
+<<<<<<< HEAD
 
 		Texture bck = CrazyBallsMain.MANAGER.get("levelsBack.png", Texture.class);
 		bck.setFilter(TextureFilter.Linear, TextureFilter.Linear);
@@ -83,6 +103,11 @@ public class PlayScreen extends AbstractScreen {
 		CrazyBallsMain.countBallslevel = cantidad;
 		CrazyBallsMain.levelx = game.getLevel();
 		
+=======
+		
+		cantidad = game.getLevel()*5;
+		
+>>>>>>> 033bf79e1c5746ec0ba0a533c76a6f1d8c905421
 	}
 
 	@Override
@@ -94,13 +119,34 @@ public class PlayScreen extends AbstractScreen {
 		
 		if(contador<cantidad){
 			createBall();
+<<<<<<< HEAD
 //			contador++;
+=======
+			contador++;
+>>>>>>> 033bf79e1c5746ec0ba0a533c76a6f1d8c905421
 		}
 		
 		stage.draw();
 	}
 
+<<<<<<< HEAD
 
+=======
+//	private void createBall2() {
+//		try{
+//			x = ((0.03f * stage.getWidth() + 
+//					0.07f * stage.getWidth() * (float) Math.random()));
+//				
+//			y = ((0.016f * stage.getHeight() + 
+//					0.8f * stage.getHeight() * (float) Math.random()));
+//			}catch(Exception e){
+//				
+//			}
+//			RemsBallActor ball = new RemsBallActor(x, y);
+//			ball.setVelocidad(-200, 200);
+//			stage.addActor(ball);
+//	}
+>>>>>>> 033bf79e1c5746ec0ba0a533c76a6f1d8c905421
 
 	//Metodo para crea nuevas pelotas
 	private void createBall(){
@@ -119,6 +165,7 @@ public class PlayScreen extends AbstractScreen {
 		}else if(y<100){
 			y += 110;
 		}
+<<<<<<< HEAD
 		
 //		Random randomGenerator = new Random();
 //		int face = randomGenerator.nextInt(3 - 1 + 1) + 1;
@@ -145,6 +192,12 @@ public class PlayScreen extends AbstractScreen {
 		}else{
 			return face;
 		}
+=======
+		RemsBallActor ball = new RemsBallActor(x, y);
+		ball.setVelocidad(-300, 300);
+		stage.addActor(ball);
+		ball.addListener(new InputDYAListener(ball, -1));
+>>>>>>> 033bf79e1c5746ec0ba0a533c76a6f1d8c905421
 		
 	}
 
@@ -156,8 +209,11 @@ public class PlayScreen extends AbstractScreen {
 	@Override
 	public void hide() {
 		Gdx.input.setInputProcessor(null);
+<<<<<<< HEAD
 		this.cont=0;
 		this.contador=0;
+=======
+>>>>>>> 033bf79e1c5746ec0ba0a533c76a6f1d8c905421
 	}
 
 	@Override
